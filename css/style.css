@@ -1,0 +1,433 @@
+body {
+    margin: auto;
+    font-family: 'Open Sans', Arial, sans-serif;
+    
+    min-width: 320px;
+/*    border: 1px solid red;*/
+    font-size: 15px;
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("../fonts/OpenSans-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("..fonts/OpenSans-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, .btn-bold, .headline, .caption {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*HEADER*/
+
+
+.header {    
+    display: flex;
+    position: relative; 
+    
+    background-image: url("../images/football_767.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #090c35;
+    background-position: center;
+    
+    
+    color: #ffffff;
+    font-size: 14px;
+    
+}
+
+.header::after {
+    content: "";
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.9;
+    
+    
+    background-color: #0a0e34;
+}
+
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 87.5%;
+    min-width: 17.5rem;
+    margin: auto;
+
+}
+
+.container-text {
+    width: 87.5%;
+    min-width: 17.5rem;
+    margin: auto; 
+}
+
+.header-title {
+    margin-bottom: 84px;
+}
+
+.logo {
+    width: 134px;
+    margin: 33px auto 123px;
+ 
+}
+
+.title {
+    font-size: 2em;
+    line-height: 1.26;
+   
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.title span {
+    text-align: left;
+    padding-top: 0.5em;
+    width: 7.5em;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+address {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-bottom: 70px;
+}
+
+button {
+    font-size: 8px;
+    background-color: #5e42b0;
+    color: #ffffff;
+    height: 35px;
+    border-radius: 30px;
+    margin-bottom: 13px;
+    border: none;
+     
+}
+.button-name {
+    text-transform: uppercase;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.apple-logo, .google-logo, .surface-logo {
+    fill: #ffffff;    
+}
+
+.google-logo {
+    height: 1.3rem;
+    padding-left: 2px;
+}
+
+.apple-logo {
+    height: 1.3rem;
+}
+
+
+.label {
+    width: 6.875rem;
+    margin: auto;
+    display: flex;
+
+    line-height: 1.4;
+}
+
+button:active {
+    border: 1px solid #3c1f91;
+}
+
+
+/*MAIN*/
+
+/*ATHLETS*/
+
+h2 {
+    font-size: 50px;
+    color: #e7e7e7;
+    line-height: 85px;
+}
+
+.sportsmen {
+    width: inherit;
+}
+
+.sportsmen img {
+    width: 60%;
+    position: absolute;
+   
+    z-index: 2;
+    margin: 0 20%;
+}
+
+.players .sportsmen img {
+    max-width: inherit;
+    width: 100%;
+    margin: auto;
+    padding: 0 10px;
+    
+}
+
+.connect {
+    background: #fafafa;
+    position: relative;
+}
+
+.number-header {
+    display: flex;
+    padding: 15px 0 18px;
+    
+}
+
+.connect .number-header {
+    padding: 75px 0 20px;
+    margin-top: 220px;
+}
+
+.number {
+    font-size: 14px;
+    color: #000000;
+    display: inline;
+    position: relative;
+   
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+
+.number::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    
+    display: block;
+    width: 100%;
+
+    border-bottom: 4px solid #625aa1;
+    border-radius: 10%;
+}
+
+.underline {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 4px;
+}
+
+h4 {
+    color: #c1c1c1;
+    font-size: 23px;
+    letter-spacing: 0.05em;
+}
+
+
+.athlets p, .players p {
+    padding-bottom: 50px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+}
+
+.collab {
+    background: #f5f4f9;
+    padding: 35px 0 5px;
+}
+
+.growth-one {
+    padding: 35px 0 5px;
+    background: #5e42b0;
+    color: #ffffff;
+}
+
+.growth-one .number {
+    color: #271950;
+}
+
+
+/*PLAYERS*/
+
+
+.growth-two {
+    background: #090c35;
+    color: #a5a6ae;
+    padding: 35px 0 5px;
+}
+
+.growth-one .number::after, .growth-two .number::after  {
+    border-bottom: 4px solid #ffffff;
+}
+
+.growth-two .number {
+    color: #8765dd;
+}
+
+
+/*ACTIVITIES*/
+
+.square {
+  display: flex;
+ 
+  background: #5844ac;
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 5;
+  left: 20px;
+  top: 290px;
+}
+
+.square .number {
+    position: relative;
+    color: #f5f6f7;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+ }
+
+.square .number::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    border-bottom: 4px solid #8f7bc8;
+    border-radius: 2px 2px 2px 2px;
+    margin-bottom: -4px;
+}
+
+.be, .find, .work {
+    position: relative;
+    z-index: 1;
+}
+
+
+h3 {
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: 0.05em;
+    color: #e7e7e7;
+    padding: 22px 0 15px;
+}
+
+.activities p {
+    padding-bottom: 77px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+}
+
+.foto {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.foto img {
+    height: 350px;
+}
+
+
+/*FOOTER*/
+
+
+.footer {    
+    display: flex;
+    position: relative; 
+    
+    background-image: url("../images/game_767.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #090c35;
+    background-position: 100% center;
+    
+    
+    color: #ffffff;
+    font-size: 14px;
+    
+    text-align: center;  
+}
+
+.footer::after {
+    content: "";
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.9;
+    
+    background-color: #0a0e34;
+}
+
+.headline {
+    font-size: 32px;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+}
+
+.caption {
+    font-size: 14px;
+    color: #9b8ec1;
+}
+
+
+.footer .logo:last-child {
+    margin: auto;
+    padding-bottom: 5px;
+    
+}
+
+.wrapper {
+    margin-bottom: 72px;
+}
+
+
+.ftr-logo {
+    fill: #ffffff;
+    width: 75%;
+}
+
+.footer-btn {
+   width: 72px;
+   height: 72px; 
+   border-radius: 10px;
+   margin-top: 100px;
+   margin-bottom: 45px;
+}
+
+.footer-btn:focus {
+    outline: none;
+}
+
+
+
