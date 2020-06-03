@@ -43,12 +43,11 @@ h1, h2, h3, h4, .btn-bold, .headline, .caption {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #090c35;
-    background-position: center;
+    background-position: top center;
     
     
     color: #ffffff;
     font-size: 14px;
-    
 }
 
 .header::after {
@@ -60,7 +59,6 @@ h1, h2, h3, h4, .btn-bold, .headline, .caption {
     left: 0;
     opacity: 0.9;
     
-    
     background-color: #0a0e34;
 }
 
@@ -71,7 +69,6 @@ h1, h2, h3, h4, .btn-bold, .headline, .caption {
     width: 87.5%;
     min-width: 17.5rem;
     margin: auto;
-
 }
 
 .container-text {
@@ -94,10 +91,8 @@ h1, h2, h3, h4, .btn-bold, .headline, .caption {
     font-size: 2em;
     line-height: 1.26;
    
-
     display: flex;
     flex-direction: column;
-    
 }
 
 .title span {
@@ -127,7 +122,6 @@ button {
     border-radius: 30px;
     margin-bottom: 13px;
     border: none;
-     
 }
 .button-name {
     text-transform: uppercase;
@@ -173,51 +167,49 @@ h2 {
 }
 
 .sportsmen {
-    width: inherit;
-}
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    min-width: 320px;
+    max-width: 640px;
+ }
 
 .sportsmen img {
     width: 60%;
-    position: absolute;
-   
-    z-index: 2;
-    margin: 0 20%;
+    max-height: 560px;
 }
 
 .players .sportsmen img {
-    max-width: inherit;
     width: 100%;
-    margin: auto;
     padding: 0 10px;
-    
 }
+
 
 .connect {
     background: #fafafa;
-    position: relative;
+    z-index: 1;
+    margin-top: -60px;
 }
 
 .number-header {
-    display: flex;
+    display: inline-block;
     padding: 15px 0 18px;
-    
 }
 
 .connect .number-header {
     padding: 75px 0 20px;
-    margin-top: 220px;
 }
 
 .number {
-    font-size: 14px;
-    color: #000000;
-    display: inline;
     position: relative;
-   
-    font-weight: bold;
     margin-right: 8px;
+ 
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    
+    vertical-align: super;
 }
-
 
 .number::after {
     content: "";
@@ -225,22 +217,16 @@ h2 {
     top: 0;
     right: 0;
     left: 0;
-    bottom: 0;
+    bottom: -3px;
     
-    display: block;
-    width: 100%;
-
+    width: 16px;
     border-bottom: 4px solid #625aa1;
-    border-radius: 10%;
+    border-radius: 2px 2px;
 }
 
-.underline {
-    position: relative;
-    margin-top: 5px;
-    margin-bottom: 4px;
-}
 
 h4 {
+    display: inline-block;
     color: #c1c1c1;
     font-size: 23px;
     letter-spacing: 0.05em;
@@ -279,7 +265,7 @@ h4 {
 }
 
 .growth-one .number::after, .growth-two .number::after  {
-    border-bottom: 4px solid #ffffff;
+    border-color: #ffffff;
 }
 
 .growth-two .number {
@@ -305,23 +291,15 @@ h4 {
 }
 
 .square .number {
-    position: relative;
     color: #f5f6f7;
-    font-size: 14px;
-    font-weight: bold;
     margin: 0;
  }
 
 .square .number::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
     bottom: 0;
 
-    border-bottom: 4px solid #8f7bc8;
-    border-radius: 2px 2px 2px 2px;
+    border-color: #8f7bc8;
+    border-radius: 2px 2px;
     margin-bottom: -4px;
 }
 
@@ -329,7 +307,6 @@ h4 {
     position: relative;
     z-index: 1;
 }
-
 
 h3 {
     font-size: 28px;
@@ -350,10 +327,17 @@ h3 {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    min-width: 320px;
+    width: 100vw;
+    max-width: 640px;
+    min-height: 350px;
 }
 
 .foto img {
-    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+    max-height: 702px;
 }
 
 
@@ -368,8 +352,7 @@ h3 {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #090c35;
-    background-position: 100% center;
-    
+    background-position: bottom right;
     
     color: #ffffff;
     font-size: 14px;
@@ -404,7 +387,6 @@ h3 {
 .footer .logo:last-child {
     margin: auto;
     padding-bottom: 5px;
-    
 }
 
 .wrapper {
