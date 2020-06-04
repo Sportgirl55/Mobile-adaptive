@@ -38,6 +38,14 @@ h1, h2, h3, h4, .btn-bold, .headline, .caption {
 .header {    
     display: flex;
     position: relative; 
+    width: 100vw;
+    min-width: 320px;
+    max-width: 640px;
+    max-height: 568px;
+/*
+    min-height: 452px;
+    max-height: 902px;
+*/
     
     background-image: url("../images/football_767.jpg");
     background-repeat: no-repeat;
@@ -66,19 +74,19 @@ h1, h2, h3, h4, .btn-bold, .headline, .caption {
 .container {
     position: relative;
     z-index: 2;
-    width: 87.5%;
-    min-width: 17.5rem;
-    margin: auto;
+    width: 280px;
+    min-width: 280px;
+    margin: 0 auto;
 }
 
 .container-text {
-    width: 87.5%;
-    min-width: 17.5rem;
+    width: 280px;
+    min-width: 280px;
     margin: auto; 
 }
 
 .header-title {
-    margin-bottom: 84px;
+    margin-bottom: 284px;
 }
 
 .logo {
@@ -110,8 +118,16 @@ a {
 address {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    margin-bottom: 70px;
+     
+    position: absolute;
+    z-index: 5;
+    top: 400px;
+    left: 0;
+    right: 0;
+    bottom: 70px;
+    max-width: 280px;
+    margin: auto;
+    
 }
 
 button {
@@ -347,6 +363,7 @@ h3 {
 .footer {    
     display: flex;
     position: relative; 
+    height: 568px;
     
     background-image: url("../images/game_767.jpg");
     background-repeat: no-repeat;
@@ -375,7 +392,7 @@ h3 {
 .headline {
     font-size: 32px;
     letter-spacing: 0.03em;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 .caption {
@@ -386,11 +403,10 @@ h3 {
 
 .footer .logo:last-child {
     margin: auto;
-    padding-bottom: 5px;
 }
 
 .wrapper {
-    margin-bottom: 72px;
+    margin-bottom: 240px;
 }
 
 
@@ -411,5 +427,107 @@ h3 {
     outline: none;
 }
 
+.footer address {
+    top: 355px;
+}
+
+/*МЕДИАЗАПРОСЫ*/
 
 
+@media (min-width: 641px) and (max-width: 960px) {
+    .header {
+        background-image: url("../images/football_1280.jpg"); 
+        min-width: 641px;
+        max-width: 960px;
+        max-height: 960px;
+    }
+    
+    .logo {
+        width: 200px;
+        margin: 45px auto 150px;
+    }
+    
+    .title {
+        font-size: 64px;
+        letter-spacing: 1px;
+    }
+    
+    .container {
+        width: 594px;
+        height: inherit;
+
+        height: 960px;
+    }  
+    
+    .title span {
+
+        margin-right:  13px;
+        padding-top: 0;    
+ }
+    
+    address {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 85%;
+        width: 85%;
+        margin: auto;
+        top: 790px
+        
+    }
+    
+    button {
+        width: 308px;
+        height: 77px;
+        font-size: 14px;
+        
+        
+        flex-shrink: 2;
+        flex-grow: 2;
+    }
+    
+    button:first-child {
+        margin-right: 15px;
+    }
+    
+    button:last-child {
+        margin-left: 15px;
+    }
+    
+    .google-logo, .apple-logo {
+       height: 3rem;
+        margin-right: 25px;
+
+   }
+    .label {
+        width: 66%;
+        min-width: 200px;
+        flex: 0;
+        justify-content: center;
+    }
+    
+    .button-name {
+        margin: auto 0;
+        padding: 0;
+    }
+    
+    .button-name {
+        white-space: nowrap;
+   }
+
+    .apple-logo {
+      margin-right: 10px;
+    }
+
+}
+    
+
+
+
+
+
+
+
+
+
+
+/*Должно ли растягиваться фоновое изображение в жедере и футере по высоте? В отличие от фоток, здесь высота фиксированная.*/
