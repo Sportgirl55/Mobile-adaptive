@@ -1,9 +1,6 @@
 body {
     margin: auto;
     font-family: 'Open Sans', Arial, sans-serif;
-    
-    min-width: 320px;
-/*    border: 1px solid red;*/
     font-size: 15px;
 }
 
@@ -38,18 +35,14 @@ h1, h2, h3, h4, .btn-bold, .headline, .caption {
 .header {    
     display: flex;
     position: relative; 
-    width: 100vw;
-    min-width: 320px;
-    max-width: 640px;
-    height: 568px;
+    width: 100%;
+    height: 100vh;
 
-    
     background-image: url("../images/football_767.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #090c35;
     background-position: top center;
-    
     
     color: #ffffff;
     font-size: 14px;
@@ -68,25 +61,15 @@ h1, h2, h3, h4, .btn-bold, .headline, .caption {
 }
 
 
-.container {
+.container, .container-text {
     z-index: 2;
-    width: 85%;
     min-width: 280px;
-    height: inherit;
-    margin: 0 auto;
+    margin: auto;
 }
 
-.container-text {
-    width: 85%;
-    min-width: 280px;
-    margin: auto; 
+.container-text:not(h2) {
     padding-bottom: 50px;
 }
-
-.top {
-    padding: 0;
-}
-
 
 .logo {
     width: 134px;
@@ -96,6 +79,10 @@ h1, h2, h3, h4, .btn-bold, .headline, .caption {
 .header .logo {
     margin-top: 33px;
     margin-bottom: 123px;
+}
+
+svg {
+    fill: #ffffff;    
 }
 
 .title {
@@ -108,15 +95,8 @@ h1, h2, h3, h4, .btn-bold, .headline, .caption {
 .title span {
     text-align: left;
     padding-top: 10px;
-    width: auto;
-    padding-left: 15%;
+    padding-left: 16%;
 }
-
-a {
-    text-decoration: none;
-    color: #ffffff;
-}
-
 
 .address-top {
     display: flex;
@@ -124,40 +104,19 @@ a {
     margin: 80px 0;
 }
 
-
-
-
-
-
 button {
     font-size: 8px;
     background-color: #5e42b0;
     color: #ffffff;
     height: 35px;
-    border-radius: 30px;
+    border-radius: 40px;
     margin-bottom: 13px;
     border: none;
 }
-.button-name {
-    text-transform: uppercase;
-    text-align: left;
-    padding-left: 5px;
 
+button:active {
+    border: 1px solid #3c1f91;
 }
-
-.apple-logo, .google-logo, .surface-logo {
-    fill: #ffffff;    
-}
-
-.google-logo {
-    height: 1.3rem;
-    padding-left: 2px;
-}
-
-.apple-logo {
-    height: 1.3rem;
-}
-
 
 .label {
     width: 6.875rem;
@@ -167,21 +126,26 @@ button {
     line-height: 1.4;
 }
 
-button:active {
-    border: 1px solid #3c1f91;
+.apple-logo {
+    height: 1.3rem;
 }
 
-/*
-.btn-top {
-    max-width: 400px;
-    margin-left: 15%;
-    margin-right: 15%;
+a {
+    text-decoration: none;
+    color: #ffffff;
 }
-*/
 
+.button-name {
+    text-transform: uppercase;
+    text-align: left;
+    padding-left: 5px;
 
+}
 
-
+.google-logo {
+    height: 1.3rem;
+    padding-left: 2px;
+}
 
 /*MAIN*/
 
@@ -190,13 +154,12 @@ button:active {
 h2 {
     font-size: 50px;
     color: #e7e7e7;
-    line-height: 85px;
+    line-height: 1.6;
 }
 
 .sportsmen {
     display: flex;
     justify-content: center;
-    width: 100vw;
     min-width: 320px;
     max-width: 640px;
  }
@@ -207,7 +170,8 @@ h2 {
 }
 
 .box {
-    margin-top: -80px;
+    margin-top: -60px;
+    width: 100%;
 }
 
 .connect {
@@ -218,11 +182,6 @@ h2 {
 .number-header {
     display: inline-block;
     margin: 15px 0 18px;
-}
-
-.connect .number-header {
-    padding: 75px 0 20px;
-    margin: 0;
 }
 
 .number {
@@ -249,6 +208,10 @@ h2 {
     border-radius: 2px 2px;
 }
 
+.connect .number-header {
+    padding: 75px 0 20px;
+    margin: 0;
+}
 
 h4 {
     display: inline-block;
@@ -257,19 +220,16 @@ h4 {
     letter-spacing: 0.05em;
 }
 
-
 p {
     line-height: 18px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.7px;
 }
 
 .collab {
     background: #f5f4f9;
-    padding: 35px 0 5px;
 }
 
 .growth-one {
-    padding: 35px 0 5px;
     background: #5e42b0;
     color: #ffffff;
 }
@@ -278,6 +238,9 @@ p {
     color: #271950;
 }
 
+.growth-one .number::after, .growth-two .number::after  {
+    border-color: #ffffff;
+}
 
 /*PLAYERS*/
 
@@ -286,31 +249,20 @@ p {
     padding: 0 10px;
 }
 
-
-
 .players .connect {
     margin-top: 30px;
 }
 
-
 .growth-two {
     background: #090c35;
     color: #a5a6ae;
-    padding: 35px 0 5px;
-}
-
-.growth-one .number::after, .growth-two .number::after  {
-    border-color: #ffffff;
 }
 
 .growth-two .number {
     color: #8765dd;
 }
 
-
 /*ACTIVITIES*/
-
-
 
 
 .be, .find, .work {
@@ -321,18 +273,14 @@ p {
 .foto {
     display: flex;
     justify-content: center;
-    overflow: hidden;
     min-width: 320px;
     width: 100vw;
-    max-width: 640px;
-    min-height: 350px;
 }
 
 .foto img {
     object-fit: cover;
     object-position: center;
     max-width: 100%;
-    max-height: 702px;
 }
 
 .square {
@@ -347,7 +295,7 @@ p {
   position: absolute;
   z-index: 5;
   left: 20px;
-  top: 290px;
+  top: 92vw;
 }
 
 .square .number {
@@ -366,21 +314,20 @@ p {
 
 h3 {
     font-size: 28px;
-    line-height: 35px;
     letter-spacing: 0.05em;
     color: #e7e7e7;
-    padding: 22px 0 15px;
+    padding-top: 24px;
+    padding-bottom: 12px;
 }
 
 .activities p {
-    padding-bottom: 77px;
     line-height: 20px;
-    letter-spacing: 0.05em;
     font-size: 16px;
 }
 
-
-
+.activities .container {
+    margin-bottom: 75px;
+}
 
 /*FOOTER*/
 
@@ -388,10 +335,8 @@ h3 {
 .footer {    
     display: flex;
     position: relative; 
-    width: 100vw;
-    min-width: 320px;
-    max-width: 640px;
-    height: 568px;
+    width: 100%;
+    height: 100vh;
     
     background-image: url("../images/game_767.jpg");
     background-repeat: no-repeat;
@@ -418,18 +363,13 @@ h3 {
     background-color: #0a0e34;
 }
 
-.address-bottom {
-    display: flex;
-    flex-direction: column;
-    margin: 70px 0;
-}
 
 .footer-btn {
    width: 72px;
    height: 72px; 
    border-radius: 10px;
    margin-top: 100px;
-   margin-bottom: 47px;
+   margin-bottom: 50px;
 }
 
 .footer-btn:focus {
@@ -437,16 +377,12 @@ h3 {
 }
 
 .ftr-logo {
-    fill: #ffffff;
     width: 75%;
 }
-
-
 
 .headline {
     font-size: 32px;
     letter-spacing: 0.03em;
-    line-height: 1.5;
 }
 
 .caption {
@@ -455,47 +391,40 @@ h3 {
     color: #9b8ec1;
 }
 
+.address-bottom {
+    display: flex;
+    flex-direction: column;
+    margin-top: 75px;
+    margin-bottom: 65px;
+}
 
-
-
-
+.footer .logo {
+    margin-bottom: 10px;
+}
 
 
 /*МЕДИАЗАПРОСЫ*/
 
-@media (min-width: 641px) {
-    
-    .header, .footer {
-        min-width: 641px;
-        max-width: 100vw; 
-        height: 960px;
-    }
-    
-    .container {
-        max-width: 1531px;
-        height: inherit;
-    }
-    
+@media screen and (min-width: 641px) {
+       
     .title span {
-          padding-top: 0;
+        padding-top: 0;
     }
     
     .logo {
         width: 200px;
-/*        margin: 45px auto 150px;*/
- 
     }
     
     .header .logo {
-        margin-bottom: 165px;
+        margin-bottom: 160px;
     }
     
-     .address-top, .address-bottom {
+    .address-top, .address-bottom {
         flex-direction: row;
         justify-content: center;
     }
     
-       .btn-footer:first-child, .btn-top:first-child {
+    .btn-top:first-child, .btn-footer:first-child {
         margin-right: 4%;        
     }
     
@@ -505,12 +434,9 @@ h3 {
         font-size: 14px;
     }
     
-  
-    
     .google-logo, .apple-logo {
        height: 3rem;
-        margin-right: 25px;
-
+       margin-right: 25px;
    }
    
     
@@ -522,17 +448,16 @@ h3 {
     
 
     .apple-logo {
-      margin-right: 10px;
+        margin-right: 10px;
     }
     
     .footer .logo {
-    margin-bottom: 20px;
+        margin-bottom: 20px;
 }
     
     h3 {
         font-size: 80px;
-        line-height: normal;
-        padding: 0;
+        letter-spacing: normal;
     }
     
     .headline {
@@ -547,8 +472,6 @@ h3 {
         justify-content: center;
     }
     
-    
-    
     .footer-btn {
        width: 135px;
        height: 135px; 
@@ -556,20 +479,26 @@ h3 {
        border-radius: 30px;
  }
     
-     .athlets, .players {
+    .athlets, .players {
         position: relative;
     }
  
-      .athlets h2, .players h2 {
-/*        padding-top: 70px;*/
+    .athlets h2, .players h2 {
         font-size: 80px;
-        line-height: normal;
-          
-        padding-bottom: 80px;
-        padding-top: 80px;
+        line-height: normal;  
+        padding-top: 57px;
     }
     
-     .connect {
+    
+    .players .box {
+        margin-top: -100px;
+    }
+    
+    .players .sportsmen {
+        top: 40px;
+    }
+
+    .connect {
         background-color: #ffffff;
     }
     
@@ -581,74 +510,11 @@ h3 {
         width: 20px;
     }
 
-    
-}
-
-
-
-@media (min-width: 641px) and (max-width: 960px) {
-    .header {
-        background-image: url("../images/football_1280.jpg"); 
-    } 
-    
-    .footer {
-        background-image: url("../images/game_1280.jpg"); 
-    }
-  
-     .sportsmen {
-        justify-content: flex-start;
-        position: absolute;
-        z-index: 5;
-        overflow: hidden;
-        left: -170px;
-        top: 90px;
-
-/*        border: 1px solid green;*/
-
-    }
-    
-    .sportsmen img {
-        width: 80%;
-        max-height: 800px;
-/*        border: 1px solid red;*/
-    }
-    
-    
-   
-    
-    .growth-two {
-       padding: 0;
-    }
-    
-    
-    .foto {
-        max-width: 100vw;
-       
-    }
-    
-    .foto img {
-        max-height: none;
-    }
-    
-  .activities .container-text, .athlets .connect .container-text {
-    padding-bottom: 0;
-}
-    
-     .activities .container-text {
-        width: 90%;
-        margin: 5%; 
-    }
-    
     .activities p {
         font-size: 24px;
         line-height: 1.2;
-        padding: 10px 0 67px;
-    }
-    
-    .square {
-        width: 115px;    
-        height: 115px;
-        top: 56%;
+/*        padding-top: 15px;*/
+        letter-spacing: 1.5px;
     }
     
     .activities .number {
@@ -658,40 +524,114 @@ h3 {
     .activities .number::after {
         width: 27px;
     }
+ }
+
+
+@media screen and (min-width: 641px) and (max-width: 960px) {
+    .header {
+        background-image: url("../images/football_1280.jpg"); 
+    } 
     
-    
-      .athlets .connect p {
-        padding-bottom: 30px;
+    .footer {
+        background-image: url("../images/game_1280.jpg"); 
     }
+  
+     .sportsmen {
+        position: absolute;
+        z-index: 5;
+        overflow: hidden;
+    }
+    
+    .sportsmen img {
+        width: 100%;
+        max-height: 800px;
+    }
+    
+    .athlets .sportsmen {
+        justify-content: flex-start;
+        left: -160px;
+        top: 100px;
+    }
+    
+    .players .sportsmen img {
+        padding: 0;
+/*        border: 1px solid green;*/
+    }
+    
+    .players .sportsmen {
+        right: 0;
+        max-width: 58vw;
+/*        border: 1px solid red;*/
+        
+    }
+    
+    .header .container {
+        width: 590px;
+      } 
+    
+    .footer .container {
+        width: 91%;
+    }
+    
+/*
+    .growth-two {
+       padding: 0;
+    }
+    
+*/
+    
+    .foto {
+        max-width: 100%;
+       
+    }
+    
+    .foto img {
+        max-height: none;
+    }
+    
+/*
+    .activities .container-text, .athlets .connect .container-text {
+        padding-bottom: 0;
+    }
+*/
+    
+    .activities .container-text {
+        width: 92%;
+        margin: 4%;
+    }
+    
+/*
+    .athlets .connect p {
+        padding-bottom: 30px;
+        
+    }
+*/
     
     .title {
         font-size: 64px;
+        line-height: 1.3;
     }
+      
     
-    .container {
-        width: 704px;
-        height: 960px;
-    }  
-    
-    .title span {
-        margin-right:  13px;
-        padding-top: 0;  
+    .title span { 
         text-align: left;
- }
+    }
    
-   
-    
-    
+/*
     .collab, .growth-one, .connect {
         padding: 0;
     }
-    
-  
+*/
     
    .athlets .container-text {
-        width: 58%;
         z-index: 6;
-        margin-right: 2%;
+        margin-right: 4%;
+        width: 57%;
+    }
+    
+    .players .container-text {
+        width: 52%;
+        margin-left: 4%;
     }
     
     .container-text:not(h2) {
@@ -699,9 +639,12 @@ h3 {
         padding-top: 20px;
     }
     
-   
+    .athlets p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
     
-    .athlets p, .players p {
+    .players p {
         font-size: 16px;
         line-height: 1.8;
     }
@@ -717,8 +660,7 @@ h3 {
     }
     
     .wrapper {
-        min-width: 586px;
-        flex-basis: auto;
+        min-width: 564px;
        
         display: flex;
         flex-direction: column;
@@ -731,86 +673,90 @@ h3 {
     
     .footer-btn {
        margin-top: 125px;
-       margin-bottom: 77px;
+       margin-bottom: 80px;
    }
    .address-top {
-        margin-top: 280px;
+        margin-top: 290px;
     }
     
     .address-bottom {
-        margin-top: 270px;
-        margin-bottom: 50px;
+        margin-top: 280px;
+        margin-bottom: 40px;
      }
     
+    
+    h3 {
+        padding-top: 0;
+    }
+    
+     .square {
+        width: 115px;    
+        height: 115px;
+        left: 32px;
+        top: 65vw;
+    }
+    
+    .activities .container {
+        margin-left: 32px;
+        width: 90%;
+        margin-top: 60px;
+        margin-bottom: 100px;
+    }
    
     
 }
 
-    
-
-
-
-
 
 @media screen and (min-width: 641px) and (max-width: 767px) {
     .headline {
-      font-size: 65px;
-
-  }
-    
-    .header-title {
-        width: 100%;
-    }
-    
-     .container {
-        width: 568px;
-    }    
-
-    .sportsmen {
-        top: 100px;
-        left: -190px;
-    }
-
-    .players .sportsmen {
-        top: 50px;
-    }
-    
-
+      font-size: 64px;
+  } 
     .caption {
         font-size: 30px;
+    }
+    
+    .athlets .container-text {
+        width: 54%;
+        margin-right: 3%;
     }
 }
 
 
 @media screen and (min-width: 961px) {
-   
     
-    .title {
-        font-size: 90px;
-
+    .container, .container-text {
+        width: 85vw;
     }
-
+    
     .header {
         background-image: url("../images/football_1920.jpg"); 
     } 
     
+    .container {
+        max-width: 1510px;
+    }
+    
+    .footer .container {
+        display: flex;
+        flex-direction: column;
+    }
+    
     .footer {
         background-image: url("../images/game_1920.jpg"); 
+    }
+    
+    .title {
+        font-size: 90px;
+        letter-spacing: 3px;
     }
     
     .caption {
         font-size: 30px;
     }
     
-    .footer .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
     .wrapper {
        text-align: left;
-        height: fit-content;
+/*        height: fit-content;*/
         margin-left: 25px;
     }
     
@@ -824,21 +770,15 @@ h3 {
     }
     
     .header .logo {
-        margin-bottom: 250px;
+        margin-bottom: 270px;
+        margin-top: 43px;
     }
     
     .title span {
         text-align: end;
         line-height: 0.8;
-        padding-right: 7%;
+        padding-left: 0;
     }
-    
-    .athlets .container-text {
-        max-width: 730px;
-        width: 45%;
-        margin-right: 3%;
-    }
-
     
     .ftr-box, .address-top {
         display: flex;
@@ -847,8 +787,8 @@ h3 {
     }
     
     .address-bottom {
-          justify-content: center;
-          margin-top: 150px;
+        margin-top: 150px;
+        margin-bottom: 245px;
     }
     
     .btn-footer:first-child, .btn-top:first-child {
@@ -856,35 +796,28 @@ h3 {
     }
      
     .footer .logo {
-        margin-bottom: 40px;
+        margin-bottom: 50px;
     }
     
     .sportsmen {
-        justify-content: flex-start;
+        justify-content: center;
         position: absolute;
         z-index: 5;
         overflow: hidden;
         max-width: 60%;
         height: auto;
         top: 20px;
-
-
-/*        border: 1px solid green;*/
-        
-        
+        right: 54%;
+        height: 100%;
     }
     
     .athlets .sportsmen img {
-        width: 85%;
+        height: 100%;
         max-height: 910px;
-/*        margin: auto;*/
         object-fit: contain;
-        object-position: center;
-        max-width: 80%;
-        min-width: 60%;
-
-/*        border: 1px solid red;*/   
-      
+        object-position: right;
+        width: 100%;
+        min-width: 55%;
     }
     
     .athlets p, .players p {
@@ -896,68 +829,162 @@ h3 {
         font-size: 36px;
     }
     
-     .players .sportsmen {
+    .players .sportsmen {
+        left: 40%;
         right: 0;
-        left: auto;
+
         top: 0;
-        justify-content: flex-end;
         max-width: 100%;
-         
+    }
+
+    .players .sportsmen img {
+     
+        max-height: 875px;
+        min-height: auto;
+        object-fit: none;
+        object-position: left;
+        padding: 0;
+}
+        
+    .athlets .container-text {
+        max-width: 770px;
+        width: auto;
+        margin-left: 48%;
+
+    }
+    
+    .players .container-text:not(h2) {
+        margin-left: 10%;
+        margin-right: 45%;
+/*        padding-bottom: 70px;*/
+        max-width: 766px;
+        width: auto;
+       
+    }
+    .athlets h2 {
+        padding-top: 85px;
+        padding-bottom: 30px;
+    }
+   
+    .players h2 {
+        padding-bottom: 100px;
+        padding-top: 90px;
+        margin-left: 10%;
+    }
+    
+
+    .activities {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .be, .find, .work {
+        display: flex;
+        width: inherit;
+    } 
+    
+    .foto {
+        max-width: 50%;
 /*        border: 1px solid red;*/
     }
     
-    .players .connect {
-        margin-top: 0;
+    .foto img {
+       width: inherit;
     }
     
-    .players .sportsmen img {
-     width: auto;
-     padding: 0;
-        
-/*    border: 1px solid green;*/
-        max-height: inherit;
-  
+    .activities .container-text {
+        width: 50vw;
+        margin: auto 7%; 
+/*        padding-bottom: 0;*/
+    }
+    
+    .activities p {
+        max-width: 645px;
+    }
+    
+    .find .foto {
+        order: 2;
+    }
+    
+    .square {
+       width: 168px;    
+       height: 168px;
+       top: 28%;
+       left: 0;
+       right: 0;
+    }
+    
+    .collab, .growth-one, .growth-two {
+       padding-top: 35px;
+   }
+    
+    .players collab, .growth-two {
+        padding-bottom: 20px;
+    }
+    
+    .athlets .connect {
+        padding-top: 55px;
+    } 
+    
+    .connect .number-header {
+        padding-top: 50px;
+    }
+    
+    h3 {
+        padding-bottom: 4rem;
+    }
+    
+    .address-top {
+        margin-top: 210px;
+        margin-bottom: 100px;
+    }
+    
+    .players p {
+        letter-spacing: normal;
+    }
+    
 }
-    
-    .players .container-text {
-        margin: 0 4%;
-       max-width: 765px;
-        width: 45%;
-    }
-    
-    .players .collab {
-        padding-bottom: 30px;
-    }
-    
-}
 
 
-
-
-
-
-@media screen and (min-width: 961px) and (max-width: 1520px) {
+@media screen and (min-width: 961px) and (max-width: 1253px) {
     .title span {
-        font-size: 64px;
-    }
-}
-/*
-
-@media screen and (min-width: 961px) and (max-width: 1200px) {
-    .athlets .sportsmen img {
-        width: 70%;
-        margin-left: 0; 
+        font-size: 60px;
     }
     
-    .sportsmen {
-         top: 150px;
+    .square {
+        width: 115px;    
+        height: 115px;
     }
 }
 
-*/
 
+@media screen and (min-width: 961px) and (max-width: 1042px) {
+    .find h3 {
+        font-size: 70px;
+    }
+}
 
+@media screen and (orientation: landscape) {
+    .header, .footer {
+        height: auto;
+    }
+}
 
+@media screen and (max-width: 640px) {
+    .growth-two, .collab {
+        padding-top: 40px;
+    }
+    
+    .growth-one {
+        padding-top: 45px;
+    }
+    
+    .container, .container-text {
+        width: 85vw;
+    }
+}
 
 
 
@@ -967,6 +994,15 @@ h3 {
 
 
 /*
+фото be active должно быть такой же высоты как и другие на ширине от 961px. Оно более узкое - с макетом не совпадает. Как сделать не знаю.
+
+надписи на кнопках - жалуется валидатор. В button нельзя вкладывать другие теги. Как быть? 
+
+хедер и футер на ширинах меньше 320 ломаются.
+Также ломаются, когда слишком большая ширина и слишком маленькая высота, например 2600 на 600.
+
+мозила не подключила шрифты
+
 
 в каком порядке адаптировать - линейно или сверху вниз.
 
