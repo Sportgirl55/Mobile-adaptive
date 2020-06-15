@@ -111,7 +111,6 @@ button {
     color: #ffffff;
     height: 35px;
     border-radius: 40px;
-/*    margin-bottom: 13px;*/
     border: none;
 }
 
@@ -119,14 +118,6 @@ button:active {
     border: 1px solid #3c1f91;
 }
 
-
-.label {
-    width: 6.875rem;
-    margin: auto;
-    display: flex;
-
-    line-height: 1.4;
-}
 
 .apple-logo {
     height: 1.7rem;
@@ -155,10 +146,7 @@ a {
     display: block;
     margin: auto;
     margin-left: 0;
-
 }
-
-
 
 /*MAIN*/
 
@@ -318,7 +306,6 @@ p {
 
 .square .number::after {
     bottom: 0;
-
     border-color: #8f7bc8;
     border-radius: 2px 2px;
     margin-bottom: -4px;
@@ -361,7 +348,6 @@ h3 {
     font-size: 14px;
     
     text-align: center;  
-    flex-direction: column;
 }
 
 .footer::after {
@@ -396,7 +382,7 @@ h3 {
 }
 
 .headline {
-    font-size: 32px;
+    font-size: 2rem;
     letter-spacing: 0.03em;
 }
 
@@ -424,7 +410,6 @@ h3 {
        
     .title span {
         padding-top: 0;
-        vertical-align: 
     }
     
     .logo {
@@ -439,16 +424,6 @@ h3 {
         flex-direction: row;
         justify-content: space-evenly;
     }
-    
-/*
-    .btn-top:first-child, .btn-footer:first-child {
-        margin-right: 15px;        
-    }
-    
-     .btn-top:last-child, .btn-footer:last-child {
-        margin-left: 15px;        
-    }
-*/
     
     button {
         width: 308px;
@@ -469,11 +444,6 @@ h3 {
         margin-left: 0;
     }
     
-
-    .apple-logo {
-        margin-right: 25px;
-    }
-    
     .footer .logo {
         margin-bottom: 20px;
 }
@@ -487,14 +457,7 @@ h3 {
         font-size: 80px;
     }
     
-    
-    .label {
-        width: 66%;
-        min-width: 200px;
-        flex: 0;
-        justify-content: center;
-    }
-    
+        
     .footer-btn {
        width: 135px;
        height: 135px; 
@@ -534,14 +497,13 @@ h3 {
     }
 
     .activities p {
-        font-size: 24px;
+        font-size: 1.5rem;
         line-height: 1.2;
-/*        padding-top: 15px;*/
         letter-spacing: 1.5px;
     }
     
     .activities .number {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
     
     .activities .number::after {
@@ -645,7 +607,7 @@ h3 {
     }
     
     h4 {
-        font-size: 32px;
+        font-size: 2rem;
     }
     
     
@@ -829,13 +791,11 @@ h3 {
     .players .sportsmen {
         left: 40%;
         right: 0;
-
         top: 0;
         max-width: 100%;
     }
 
     .players .sportsmen img {
-     
         max-height: 875px;
         min-height: auto;
         object-fit: none;
@@ -847,13 +807,11 @@ h3 {
         max-width: 770px;
         width: auto;
         margin-left: 48%;
-
     }
     
     .players .container-text:not(h2) {
         margin-left: 10%;
         margin-right: 45%;
-/*        padding-bottom: 70px;*/
         max-width: 766px;
         width: auto;
        
@@ -884,7 +842,6 @@ h3 {
     
     .foto {
         max-width: 50%;
-/*        border: 1px solid red;*/
     }
     
     .foto img {
@@ -894,7 +851,6 @@ h3 {
     .activities .container-text {
         width: 50vw;
         margin: auto 7%; 
-/*        padding-bottom: 0;*/
     }
     
     .activities p {
@@ -992,25 +948,3 @@ h3 {
     }
 }
 
-
-
-
-
-
-
-
-/*
-фото be active должно быть такой же высоты как и другие на ширине от 961px. Оно более узкое - с макетом не совпадает. Как сделать не знаю.
-
-надписи на кнопках - жалуется валидатор. В button нельзя вкладывать другие теги. Как быть? 
-
-хедер и футер на ширинах меньше 320 ломаются.
-Также ломаются, когда слишком большая ширина и слишком маленькая высота, например 2600 на 600.
-
-мозила не подключила шрифты
-
-
-в каком порядке адаптировать - линейно или сверху вниз.
-
-как должен вести себя фиолетовый квадратик относительно фото.
-*/
