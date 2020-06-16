@@ -19,7 +19,7 @@ body {
 
 @font-face {
     font-family: 'Open Sans';
-    src: url("..fonts/OpenSans-Bold.woff2");
+    src: url("../fonts/OpenSans-Bold.woff2");
     font-weight: 700;
     font-style: normal;
 }
@@ -65,6 +65,10 @@ h1, h2, h3, h4, .btn-bold, .headline, .caption {
     z-index: 2;
     min-width: 280px;
     margin: auto;
+}
+
+.container-text {
+    position: relative;
 }
 
 .container-text:not(h2) {
@@ -168,6 +172,8 @@ h2 {
 .sportsmen img {
     width: 60%;
     max-height: 560px;
+    object-fit: contain;
+    object-position: center;
 }
 
 .box {
@@ -276,6 +282,9 @@ p {
     justify-content: center;
     min-width: 320px;
     width: 100vw;
+    display: flex;
+    min-height: 350px;
+    max-height: 100vw;
 }
 
 .foto img {
@@ -295,8 +304,8 @@ p {
   justify-content: center;
   position: absolute;
   z-index: 5;
-  left: 20px;
-  top: 92vw;
+  top: -50px;
+
 }
 
 .square .number {
@@ -402,6 +411,7 @@ h3 {
 .footer .logo {
     margin-bottom: 10px;
 }
+
 
 
 /*МЕДИАЗАПРОСЫ*/
@@ -649,8 +659,7 @@ h3 {
      .square {
         width: 115px;    
         height: 115px;
-        left: 32px;
-        top: 65vw;
+        top: -120px;
     }
     
     .activities .container {
@@ -859,6 +868,10 @@ h3 {
     
     .find .foto {
         order: 2;
+    }
+    
+    .container-text {
+        position: initial;
     }
     
     .square {
